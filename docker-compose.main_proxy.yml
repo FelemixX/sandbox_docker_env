@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
 
   # Контейнер для проксирования http запросов и ssh подключений
@@ -78,7 +76,7 @@ services:
 
   # Контейнер для подключения и управления mysql базами данных песочниц
   adminer:
-    image: ghcr.io/serdcebolit/adminer:latest
+    image: adminer:latest
     container_name: "adminer"
     restart: always
     networks:
@@ -123,7 +121,7 @@ services:
 
   # Контейнер для генерации ssh ключей и конфигов для sshproxy
   sshproxy_gen:
-    image: ghcr.io/serdcebolit/sshproxy-gen:latest
+    image: sshproxy-gen:latest
     container_name: main_sshproxy_gen
     restart: always
     networks:

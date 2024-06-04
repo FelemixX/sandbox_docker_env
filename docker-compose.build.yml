@@ -1,28 +1,27 @@
-version: "3.9"
 services:
   nginx:
     build: ./nginx
-    image: ghcr.io/serdcebolit/nginx:latest
+    image: nginx:latest
 
   mysql:
     build: ./mysql
-    image: ghcr.io/serdcebolit/mysql:latest
+    image: mysql:latest
 
   deploy_manager:
     build: ./deploy_manager
-    image: ghcr.io/serdcebolit/deploy_manager:latest
+    image: ghcr.io/serdcebolit/deploy_manager
 
   sshproxy_gen:
     build: ./sshproxy
-    image: ghcr.io/serdcebolit/sshproxy-gen:latest
+    image: sshproxy-gen:latest
 
   bx_installer:
     build: ./bx_installer
-    image: ghcr.io/serdcebolit/bx_installer:latest
+    image: bx_installer:latest
 
   adminer:
     build: ./adminer
-    image: ghcr.io/serdcebolit/adminer:latest
+    image: adminer:latest
 
 #образы без xdebug
   backend70:
@@ -31,7 +30,7 @@ services:
       target: httpd_base
       args:
         PHP_VERSION: 70
-    image: ghcr.io/serdcebolit/httpd:70
+    image: httpd:70
 
   backend71:
     build:
@@ -39,7 +38,7 @@ services:
       target: httpd_base
       args:
         PHP_VERSION: 71
-    image: ghcr.io/serdcebolit/httpd:71
+    image: httpd:71
 
   backend72:
     build:
@@ -47,7 +46,7 @@ services:
       target: httpd_base
       args:
         PHP_VERSION: 72
-    image: ghcr.io/serdcebolit/httpd:72
+    image: httpd:72
 
   backend73:
     build:
@@ -55,7 +54,7 @@ services:
       target: httpd_base
       args:
         PHP_VERSION: 73
-    image: ghcr.io/serdcebolit/httpd:73
+    image: httpd:73
 
   backend74:
     build:
@@ -63,7 +62,7 @@ services:
       target: httpd_base
       args:
         PHP_VERSION: 74
-    image: ghcr.io/serdcebolit/httpd:74
+    image: httpd:74
 
   backend80:
     build:
@@ -71,7 +70,7 @@ services:
       target: httpd_base
       args:
         PHP_VERSION: 80
-    image: ghcr.io/serdcebolit/httpd:80
+    image: httpd:80
 
   backend81:
     build:
@@ -79,7 +78,7 @@ services:
       target: httpd_base
       args:
         PHP_VERSION: 81
-    image: ghcr.io/serdcebolit/httpd:81
+    image: httpd:81
 
   backend82:
     build:
@@ -87,7 +86,7 @@ services:
       target: httpd_base
       args:
         PHP_VERSION: 82
-    image: ghcr.io/serdcebolit/httpd:82
+    image: httpd:82
 
   backend83:
     build:
@@ -95,7 +94,7 @@ services:
       target: httpd_base
       args:
         PHP_VERSION: 83
-    image: ghcr.io/serdcebolit/httpd:83
+    image: httpd:83
 
 #образы с xdebug
   backend71-xdebug:
@@ -104,7 +103,7 @@ services:
       target: httpd_xdebug
       args:
         PHP_VERSION: 71
-    image: ghcr.io/serdcebolit/httpd:71-xdebug
+    image: httpd:71-xdebug
 
   backend72-xdebug:
     build:
@@ -112,7 +111,7 @@ services:
       target: httpd_xdebug
       args:
         PHP_VERSION: 72
-    image: ghcr.io/serdcebolit/httpd:72-xdebug
+    image: httpd:72-xdebug
 
   backend74-xdebug:
     build:
@@ -120,7 +119,7 @@ services:
       target: httpd_xdebug
       args:
         PHP_VERSION: 74
-    image: ghcr.io/serdcebolit/httpd:74-xdebug
+    image: httpd:74-xdebug
 
   backend80-xdebug:
     build:
@@ -128,7 +127,7 @@ services:
       target: httpd_xdebug
       args:
         PHP_VERSION: 80
-    image: ghcr.io/serdcebolit/httpd:80-xdebug
+    image: httpd:80-xdebug
 
   backend81-xdebug:
     build:
@@ -136,7 +135,7 @@ services:
       target: httpd_xdebug
       args:
         PHP_VERSION: 81
-    image: ghcr.io/serdcebolit/httpd:81-xdebug
+    image: httpd:81-xdebug
 
   backend82-xdebug:
     build:
@@ -144,7 +143,7 @@ services:
       target: httpd_xdebug
       args:
         PHP_VERSION: 82
-    image: ghcr.io/serdcebolit/httpd:82-xdebug
+    image: httpd:82-xdebug
 
   backend83-xdebug:
     build:
@@ -152,4 +151,4 @@ services:
       target: httpd_xdebug
       args:
         PHP_VERSION: 83
-    image: ghcr.io/serdcebolit/httpd:83-xdebug
+    image: httpd:83-xdebug
